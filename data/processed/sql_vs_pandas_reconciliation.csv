@@ -1,0 +1,60 @@
+test,sql_value,pandas_value,status
+Customer rows,45211.0,45211.0,PASS
+"Q1 deposit share, job = admin",9.5,9.536,PASS
+"Q1 deposit share, job = blue collar",17.0,17.047,PASS
+"Q1 deposit share, job = entrepreneur",3.7,3.673,PASS
+"Q1 deposit share, job = housemaid",2.8,2.803,PASS
+"Q1 deposit share, job = management",27.1,27.083,PASS
+"Q1 deposit share, job = retired",7.3,7.294,PASS
+"Q1 deposit share, job = self employed",4.2,4.225,PASS
+"Q1 deposit share, job = services",6.7,6.725,PASS
+"Q1 deposit share, job = student",2.1,2.114,PASS
+"Q1 deposit share, job = technician",15.5,15.451,PASS
+"Q1 deposit share, job = unemployed",3.2,3.219,PASS
+"Q1 deposit share, job = unknown",0.8,0.829,PASS
+"Q1 deposit share, age group = 18-24",1.2,1.203,PASS
+"Q1 deposit share, age group = 25-34",26.4,26.365,PASS
+"Q1 deposit share, age group = 35-44",30.2,30.19,PASS
+"Q1 deposit share, age group = 45-54",23.3,23.26,PASS
+"Q1 deposit share, age group = 55-64",15.3,15.312,PASS
+"Q1 deposit share, age group = 65+",3.7,3.671,PASS
+Q3 housing loan adoption %,55.6,55.584,PASS
+Q3 personal loan adoption %,16.0,16.023,PASS
+Q3 term deposit adoption %,11.7,11.698,PASS
+Q4 zero or negative balance %,16.1,16.102,PASS
+Q4 no product %,31.1,31.119,PASS
+"Q5 average balance, education = Primary",1251.0,1250.95,PASS
+"Q5 median balance, education = Primary",403.0,403.0,PASS
+"Q5 average balance, education = Secondary",1155.0,1154.881,PASS
+"Q5 median balance, education = Secondary",392.0,392.0,PASS
+"Q5 average balance, education = Tertiary",1758.0,1758.416,PASS
+"Q5 median balance, education = Tertiary",577.0,577.0,PASS
+"Q5 average balance, education = Unknown",1527.0,1526.754,PASS
+"Q5 median balance, education = Unknown",568.0,568.0,PASS
+"Q6 missed sign ups, job = blue collar",430.0,430.496,PASS
+"Q6 missed sign ups, job = entrepreneur",51.0,50.956,PASS
+"Q6 missed sign ups, job = housemaid",36.0,36.061,PASS
+"Q6 missed sign ups, job = services",117.0,116.955,PASS
+"Q6 missed sign ups, job = technician",49.0,48.734,PASS
+W1 decile 1 balance share %,56.9,56.893,PASS
+W1 decile 2 balance share %,19.0,19.03,PASS
+W1 decile 3 balance share %,10.7,10.668,PASS
+W1 decile 4 balance share %,6.6,6.562,PASS
+W1 decile 5 balance share %,4.2,4.166,PASS
+W1 decile 6 balance share %,2.6,2.6,PASS
+W1 decile 7 balance share %,1.5,1.46,PASS
+W1 decile 8 balance share %,0.5,0.537,PASS
+W1 decile 9 balance share %,0.0,0.026,PASS
+W1 decile 10 balance share %,-1.9,-1.942,PASS
+W3 conversion % month 1,10.1,10.121,PASS
+W3 conversion % month 2,16.6,16.648,PASS
+W3 conversion % month 3,52.0,51.992,PASS
+W3 conversion % month 4,19.7,19.679,PASS
+W3 conversion % month 5,6.7,6.719,PASS
+W3 conversion % month 6,10.2,10.223,PASS
+W3 conversion % month 7,9.1,9.094,PASS
+W3 conversion % month 8,11.0,11.013,PASS
+W3 conversion % month 9,46.5,46.459,PASS
+W3 conversion % month 10,43.8,43.767,PASS
+W3 conversion % month 11,10.2,10.151,PASS
+W3 conversion % month 12,46.7,46.729,PASS

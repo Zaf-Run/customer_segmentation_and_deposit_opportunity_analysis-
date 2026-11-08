@@ -1,0 +1,77 @@
+// measures.dax  -  create a table called "Measures" (Enter Data, one blank column, then hide the column)
+// and paste each measure. Table names assume: fact_customers, dim_age_group, dim_balance_band, dim_month, dim_job.
+
+// ---------- Core
+Total Customers = COUNTROWS ( fact_customers )
+Total Balance = SUM ( fact_customers[balance] )
+Avg Balance = DIVIDE ( [Total Balance], [Total Customers] )
+Median Balance = MEDIAN ( fact_customers[balance] )
+Term Deposit Signups = SUM ( fact_customers[term_deposit_flag] )
+Conversion Rate = DIVIDE ( [Term Deposit Signups], [Total Customers] )
+
+// ---------- Benchmarks (ignore every filter so segments compare with the whole bank)
+Bank Conversion = CALCULATE ( [Conversion Rate], ALL ( fact_customers ) )
+Bank Avg Balance = CALCULATE ( [Avg Balance], ALL ( fact_customers ) )
+Conversion Index = DIVIDE ( [Conversion Rate], [Bank Conversion] )
+Balance Index = DIVIDE ( [Avg Balance], [Bank Avg Balance] )
+
+// ---------- Shares (respect slicers, ignore the visual's own grouping)
+Customer Share =
+DIVIDE ( [Total Customers], CALCULATE ( [Total Customers], ALLSELECTED ( fact_customers ) ) )
+
+Deposit Share =
+DIVIDE ( [Total Balance], CALCULATE ( [Total Balance], ALLSELECTED ( fact_customers ) ) )
+
+Signup Share =
+DIVIDE ( [Term Deposit Signups], CALCULATE ( [Term Deposit Signups], ALLSELECTED ( fact_customers ) ) )
+
+// ---------- Activity proxies (no transaction history exists in the file)
+Zero or Negative Balance % = AVERAGE ( fact_customers[zero_or_negative_flag] )
+Overdrawn % = AVERAGE ( fact_customers[overdrawn_flag] )
+No Product % = AVERAGE ( fact_customers[no_product_flag] )
+Two Plus Products % =
+DIVIDE ( CALCULATE ( COUNTROWS ( fact_customers ), fact_customers[product_count] >= 2 ), [Total Customers] )
+
+// ---------- Product adoption
+Housing Loan Adoption = AVERAGE ( fact_customers[housing_loan_flag] )
+Personal Loan Adoption = AVERAGE ( fact_customers[personal_loan_flag] )
+Term Deposit Adoption = AVERAGE ( fact_customers[term_deposit_flag] )
+Credit Default Rate = AVERAGE ( fact_customers[credit_default_flag] )
+
+// ---------- Underperformance and opportunity
+Missed Signups =
+VAR gap = [Bank Conversion] - [Conversion Rate]
+RETURN IF ( gap > 0, gap * [Total Customers], 0 )
+
+Segment Status =
+SWITCH (
+    TRUE (),
+    [Customer Share] < 0.01, "Too small to judge",
+    [Balance Index] >= 1 && [Conversion Index] < 1, "Deposit campaign target",
+    [Conversion Index] < 0.9, "Low conversion",
+    [Conversion Index] >= 1.2, "High performer",
+    "On par"
+)
+
+// ---------- Deposit concentration (top 10% of customers by positive balance)
+Top 10 Pct Balance Share =
+VAR n = ROUNDUP ( CALCULATE ( [Total Customers], ALLSELECTED ( fact_customers ) ) * 0.1, 0 )
+VAR topSum =
+    SUMX ( TOPN ( n, ALLSELECTED ( fact_customers ), fact_customers[balance_positive], DESC ), fact_customers[balance_positive] )
+RETURN DIVIDE ( topSum, CALCULATE ( SUM ( fact_customers[balance_positive] ), ALLSELECTED ( fact_customers ) ) )
+
+// ---------- Campaign
+Avg Contacts per Customer = AVERAGE ( fact_customers[campaign] )
+Prior Campaign Reach % = AVERAGE ( fact_customers[prior_contacted_flag] )
+Unknown Channel Share =
+DIVIDE ( CALCULATE ( [Total Customers], fact_customers[contact] = "Unknown" ), [Total Customers] )
+
+// ---------- Text for the insight boxes (dynamic)
+Insight Concentration =
+"Top 10% of customers hold " & FORMAT ( [Top 10 Pct Balance Share], "0%" ) & " of positive balances."
+Insight Conversion =
+"Term deposit conversion is " & FORMAT ( [Conversion Rate], "0.0%" ) & " across " & FORMAT ( [Total Customers], "#,0" ) & " customers."
+
+// ---------- Reference values to test the model against (selected nothing, no slicers)
+// Total Customers 45,211 | Total Balance 61,589,682 | Avg 1,362 | Median 448 | Conversion 11.7%
+// Zero or Negative 16.1% | No Product 31.1% | Housing 55.6% | Personal 16.0% | Top 10 Pct (positive) about 55.8%

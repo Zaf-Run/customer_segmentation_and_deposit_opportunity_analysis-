@@ -1,0 +1,26 @@
+dimension,segment,customers,total_balance,deposit_share_pct,customer_share_pct,deposit_rank
+Age group,35-44,14534,18593785,30.2,32.1,1
+Age group,25-34,14204,16238071,26.4,31.4,2
+Age group,45-54,9958,14326000,23.3,22.0,3
+Age group,55-64,4896,9430323,15.3,10.8,4
+Age group,65+,810,2260711,3.7,1.8,5
+Age group,18-24,809,740792,1.2,1.8,6
+Education,secondary,23202,26795544,43.5,51.3,1
+Education,tertiary,13301,23388697,38.0,29.4,2
+Education,primary,6851,8570258,13.9,15.2,3
+Education,unknown,1857,2835183,4.6,4.1,4
+Job,management,9458,16680288,27.1,20.9,1
+Job,blue collar,9732,10499141,17.0,21.5,2
+Job,technician,7597,9516246,15.5,16.8,3
+Job,admin,5171,5873423,9.5,11.4,4
+Job,retired,2264,4492263,7.3,5.0,5
+Job,services,4154,4141904,6.7,9.2,6
+Job,self employed,1579,2602146,4.2,3.5,7
+Job,entrepreneur,1487,2262426,3.7,3.3,8
+Job,unemployed,1303,1982835,3.2,2.9,9
+Job,housemaid,1240,1726570,2.8,2.7,10
+Job,student,938,1302001,2.1,2.1,11
+Job,unknown,288,510439,0.8,0.6,12
+Marital status,married,27214,38805139,63.0,60.2,1
+Marital status,single,12790,16646155,27.0,28.3,2
+Marital status,divorced,5207,6138388,10.0,11.5,3

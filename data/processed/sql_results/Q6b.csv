@@ -1,0 +1,4 @@
+job,age_group,customers,avg_balance,conversion_pct,missed_signups
+blue collar,55-64,725,1638.0,7.3,32.0
+self employed,35-44,556,1781.0,9.5,12.0
+management,45-54,2051,1939.0,11.5,5.0

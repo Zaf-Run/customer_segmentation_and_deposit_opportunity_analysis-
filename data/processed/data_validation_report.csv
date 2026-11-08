@@ -1,0 +1,18 @@
+check,result,status
+Row count,45211,PASS
+Column count,17,PASS
+Missing values (all columns),0,PASS
+Exact duplicate rows,0,PASS
+Age range,18 to 95,PASS
+Day of month range,1 to 31,PASS
+Months are valid,all valid,PASS
+Target y only yes or no,"['no', 'yes']",PASS
+pdays = -1 matches previous = 0,True,PASS
+"Balance outliers by 1.5 x IQR (kept, flagged)",4729 rows (10.5%),REVIEW
+Balance min / max (EUR),-8019 / 102127,PASS
+'unknown' in job,288 rows (0.6%),PASS
+'unknown' in education,1857 rows (4.1%),PASS
+'unknown' in contact,13020 rows (28.8%),REVIEW
+'unknown' in poutcome,36959 rows (81.7%),REVIEW
+Customer ID column present,No (surrogate key created),REVIEW
+Year column present,No (months cannot be placed on a timeline),REVIEW

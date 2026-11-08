@@ -1,0 +1,5 @@
+poutcome,customers,conversion_pct,avg_balance,conversion_rank
+success,1511,64.7,1939.0,1
+other,1840,16.7,1487.0,2
+failure,4901,12.6,1466.0,3
+unknown,36959,9.2,1319.0,4

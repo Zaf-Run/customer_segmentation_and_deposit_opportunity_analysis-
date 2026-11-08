@@ -1,0 +1,12 @@
+{
+  "name": "Bank Analytics",
+  "dataColors": ["#1F3A5F", "#2A9D8F", "#E76F51", "#E9C46A", "#6C8EAD", "#9AA5B1", "#8AB17D", "#B56576"],
+  "background": "#FFFFFF",
+  "foreground": "#1F2933",
+  "tableAccent": "#1F3A5F",
+  "textClasses": {
+    "title": {"fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#1F3A5F"},
+    "label": {"fontFace": "Segoe UI", "fontSize": 10, "color": "#3E4C59"},
+    "callout": {"fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#1F3A5F"}
+  }
+}

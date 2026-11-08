@@ -1,0 +1,19 @@
+age_group,job,customers,total_balance,rnk
+18-24,student,327,369175,1
+18-24,blue collar,147,117889,2
+18-24,technician,82,67439,3
+25-34,management,3131,5034781,1
+25-34,technician,2740,3294199,2
+25-34,blue collar,2967,2623539,3
+35-44,management,3264,5233305,1
+35-44,blue collar,3486,3542384,2
+35-44,technician,2620,3222008,3
+45-54,management,2051,3977563,1
+45-54,blue collar,2401,2989296,2
+45-54,technician,1613,2101591,3
+55-64,management,931,2276306,1
+55-64,retired,1240,2230326,2
+55-64,blue collar,725,1187532,3
+65+,retired,675,1868359,1
+65+,management,42,125281,2
+65+,housemaid,30,44758,3

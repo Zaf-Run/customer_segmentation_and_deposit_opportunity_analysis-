@@ -1,0 +1,7 @@
+balance_band,balance_min,balance_max,sort_order
+1 Overdrawn,-100000,-1,1
+2 Zero,0,0,2
+3 Low (1-500),1,500,3
+4 Medium (501-1500),501,1500,4
+5 High (1501-5000),1501,5000,5
+6 Very high (5000+),5001,1000000,6

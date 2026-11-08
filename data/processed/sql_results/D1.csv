@@ -1,0 +1,11 @@
+chk,result
+row count (expect 45211),45211
+null balances (expect 0),0
+null age group (expect 0),0
+null balance band (expect 0),0
+duplicate customer ids (expect 0),0
+age outside 18 to 100 (expect 0),0
+month not mapped (expect 0),0
+pdays/previous mismatch (expect 0),0
+unknown job rows,288
+unknown contact channel rows,13020

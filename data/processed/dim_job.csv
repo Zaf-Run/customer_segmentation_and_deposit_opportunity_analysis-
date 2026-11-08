@@ -1,0 +1,13 @@
+job,job_group
+Admin,Professional
+Blue Collar,Manual and service
+Entrepreneur,Business owner
+Housemaid,Manual and service
+Management,Professional
+Retired,Not working
+Self Employed,Business owner
+Services,Manual and service
+Student,Not working
+Technician,Professional
+Unemployed,Not working
+Unknown,Unknown
