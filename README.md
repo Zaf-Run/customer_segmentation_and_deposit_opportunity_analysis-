@@ -123,10 +123,6 @@ The final script generates the Excel workbook. Open it in Excel to calculate the
 
 For the MySQL implementation, execute the SQL scripts in the order indicated by their numbering, from data loading through data quality checks, using MySQL 8.
 
-### Power BI
-
-Follow [`powerbi/build_guide.md`](powerbi/build_guide.md) to recreate the four-page dashboard using the processed datasets and DAX measures.
-
 ## Technical Approach & Validation
 
 Several checks were used to ensure that the analysis was consistent across the different tools.
@@ -146,8 +142,7 @@ Several checks were used to ensure that the analysis was consistent across the d
 | Pandas & NumPy | Data manipulation and calculations |
 | SciPy | Statistical testing |
 | Matplotlib | Data visualization |
-| OpenPyXL & Excel | Workbook generation, formulas, and validation |
-| Power BI | Interactive dashboard and business reporting |
+| Excel | Workbook generation, formulas, and validation |
 
 ## Data Source
 
